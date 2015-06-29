@@ -33,7 +33,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python-dev \
     python-pip \
     ruby \
-    supervisor
+    supervisor \
+    vim
 
 RUN pip install -U pip
 
