@@ -1,0 +1,47 @@
+###############################################################################
+# Environment
+###############################################################################
+
+FROM debian:jessie
+MAINTAINER <hi@sparkgeo.com>
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV LANG C.UTF-8
+ENV LANGUAGE C.UTF-8
+ENV LC_ALL C.UTF-8
+
+###############################################################################
+# Libraries
+###############################################################################
+
+# Pre apt-get install
+RUN apt-get update && apt-get install -y --no-install-recommends curl
+RUN curl -sL https://deb.nodesource.com/setup_dev | bash -
+
+# Post apt-get install
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    libffi-dev \
+    libmemcached-dev \
+    libpq-dev \
+    libxslt-dev \
+    nginx \
+    npm \
+    nodejs \
+    postgis \
+    python-dev \
+    python-pip \
+    ruby \
+    supervisor
+
+RUN pip install -U pip
+
+RUN gem install sass
+
+RUN ln -s "$(which nodejs)" /usr/bin/node
+RUN npm install -g npm
+RUN chown -R $(whoami) ~/.npm
+RUN npm install -g \
+    bower \
+    gulp
