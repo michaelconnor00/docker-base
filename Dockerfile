@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install -U pip
 
-RUN gem install sass
+RUN gem install sass ultrahook
 
 RUN ln -s "$(which nodejs)" /usr/bin/node
 RUN npm install -g npm
