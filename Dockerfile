@@ -16,7 +16,7 @@ ENV LC_ALL C.UTF-8
 
 # Pre apt-get install
 RUN apt-get update && apt-get install -y --no-install-recommends curl
-RUN curl -sL https://deb.nodesource.com/setup_dev | bash -
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
 # Post apt-get install
 RUN apt-get update && apt-get install -y --no-install-recommends \
