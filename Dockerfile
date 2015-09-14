@@ -36,10 +36,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     vim
 
 RUN pip install --upgrade pip
-
 RUN gem install sass ultrahook
-
-RUN npm install -g npm
-RUN npm install -g \
-    bower \
-    gulp
+RUN npm install -g bower gulp npm
