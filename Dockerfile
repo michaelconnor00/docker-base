@@ -39,9 +39,7 @@ RUN pip install --upgrade pip
 
 RUN gem install sass ultrahook
 
-RUN ln -s "$(which nodejs)" /usr/bin/node
 RUN npm install -g npm
-RUN chown -R $(whoami) ~/.npm
 RUN npm install -g \
     bower \
     gulp
