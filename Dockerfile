@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxslt-dev \
     nginx \
     nodejs \
+    npm \
     postgis \
     python-dev \
     python-pip \
