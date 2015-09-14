@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     supervisor \
     vim
 
-RUN pip install -U pip
+RUN pip install --upgrade pip
 
 RUN gem install sass ultrahook
 
